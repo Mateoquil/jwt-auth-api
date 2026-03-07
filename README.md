@@ -1,12 +1,12 @@
-# JWT Auth API
+# POS Authentication Module
 
-A RESTful API with JWT-based authentication built with Node.js, Express, and MySQL.
+Authentication and authorization system for Point of Sale applications using JWT tokens.
 
 ## Features (Planned)
 
 - 🔐 User registration and login
 - 🎫 JWT token authentication
-- 👤 User roles (admin, user)
+- 👤 User roles (Admin, Cashier, Manager)
 - 🔒 Protected routes
 - 📝 CRUD operations with authorization
 - 🔑 Password hashing with bcrypt
@@ -25,8 +25,8 @@ A RESTful API with JWT-based authentication built with Node.js, Express, and MyS
 ## Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/jwt-auth-api.git
-cd jwt-auth-api
+git clone https://github.com/Mateoquil/pos-auth-module.git
+cd pos-auth-module
 
 # Install dependencies
 npm install
@@ -44,7 +44,8 @@ npm start
 - Implement rate limiting
 - Add email verification
 - Create API documentation with Swagger
+- **Integrate with POS inventory system**
 
 ---
 
-**Note:** This project is being developed as part of a backend development portfolio.
+**Note:** This authentication module is designed to be integrated into a Point of Sale system. Developed as part of a backend development portfolio.
