@@ -48,4 +48,8 @@ npm start
 
 ---
 
+## 📋 Next Steps (Short-term To-Do)
+- [ ] Configure initial environment variables (`.env`).
+- [ ] Create the base folder structure (`src/controllers`, `src/routes`).
+
 **Note:** This authentication module is designed to be integrated into a Point of Sale system. Developed as part of a backend development portfolio.
