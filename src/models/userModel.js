@@ -2,13 +2,13 @@ import bcrypt from 'bcrypt';
 import connection from '../database/database.js';
 
 export default {
-    create: async (email, password) => {
+    create: async (email, password, role) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         return new Promise((resolve, reject) => {
             connection.query(
-                'INSERT INTO users (email, password) VALUES (?, ?)',
-                [email, hashedPassword],
+                'INSERT INTO users (email, password, role) VALUES (?, ?, ?)',
+                [email, hashedPassword, role],
                 (err, result) => {
                     if (err) reject(err);
                     else resolve(result);
