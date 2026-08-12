@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import connection from '../database/database.js';
 
 export default {
@@ -25,6 +25,20 @@ export default {
                 (err, results) => {
                     if (err) reject(err);
                     else resolve(results[0]);
+                }
+            );
+        });
+    },
+
+
+    deleteByEmail: (email) => {
+        return new Promise((resolve, reject) => {
+            connection.query(
+                'DELETE FROM users WHERE email = ?',
+                [email],
+                (err, results) => {
+                    if (err) reject(err);
+                    else resolve(results);
                 }
             );
         });
